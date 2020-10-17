@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Superhero
+namespace Superhero.Models
 {
-    public class Superhero
+    public class SuperHero
     {
         [Key]
         public int ID { get; set; }
