@@ -6,6 +6,7 @@
 
 <h1>Index</h1>
 
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -34,31 +35,32 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlterEgo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrimaryAbility)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SecondaryAbility)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatchPhrase)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID}) 
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlterEgo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimaryAbility)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecondaryAbility)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CatchPhrase)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
